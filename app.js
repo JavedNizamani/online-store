@@ -1,3 +1,4 @@
+require('./models/index');
 const path = require('path');
 
 const express = require('express');

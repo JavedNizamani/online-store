@@ -15,8 +15,8 @@ fs.readFile(p,(err, data)=>{
     else{
         const updateData = JSON.parse(data);
 
-      updateData[0].price = this.price;
-      updateData[0].description = this.description;
+      updateData[3].price = this.price;
+      updateData[3].description = this.description;
         
         console.log(updateData);
 
