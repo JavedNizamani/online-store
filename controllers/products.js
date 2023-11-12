@@ -13,8 +13,8 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = async(req, res, next) => {
-  const product = new Product(req.body.title, req.body.image, req.body.price, req.body.description);
-  product.save();
+  // const product = new Product(req.body.title, req.body.image, req.body.price, req.body.description);
+  // product.save();
 
   const {title, image, price, description} = req.body;      // modified this version of code for inserting data into DB
     await myProducts.create({
@@ -30,7 +30,7 @@ exports.postAddProduct = async(req, res, next) => {
 
 
 exports.getProducts = async(req, res, next) => {
-  
+
   Product.fetchAll(products => {
     res.render('shop', {
       prods: products,
